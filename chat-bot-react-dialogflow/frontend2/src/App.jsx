@@ -23,16 +23,13 @@ const App = () => {
     };
 
     try {
-      const response = await fetch(
-        "https://fcb0-202-140-36-183.ngrok-free.app/dialogflow",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(requestBody),
-        }
-      );
+      const response = await fetch("http://35.223.72.146/dialogflow", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
